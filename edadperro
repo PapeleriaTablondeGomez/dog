@@ -1,0 +1,20 @@
+def calcular_edad_perro(anios, meses):
+    total_meses = anios * 12 + meses
+
+    if total_meses < 0:
+        print("La edad del perro no puede ser negativa.")
+    elif total_meses <= 24:
+        edad_humana = total_meses / 2
+    else:
+        edad_humana = 24 + ((total_meses - 24) / 4)
+    return edad_humana
+
+# Solicitar la edad del perro al usuario
+anios_perro = int(input("Ingresa los años de tu perro: "))
+meses_perro = int(input("Ingresa los meses de tu perro: "))
+
+# Calcular la edad del perro en años humanos
+edad_humana = calcular_edad_perro(anios_perro, meses_perro)
+
+# Mostrar el resultado
+print(f"La edad de tu perro en años humanos es aproximadamente {edad_humana} años.")
